@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container my-3">
+        <div class="row border rounded">
+            <div class="col-12 bg-light py-2 border-bottom">
+                <h4>Payment form example</h4>
+            </div>
+            <div class="col-12">
+                <p class="my-2 p-2 alert alert-danger">Some fields are missing</p>
+            </div>
+            <form class="row mt-1 g-3">
+                <div class="col-4">
+                    <label for="cardNumber" class="form-label">Card#</label>
+                    <input type="text" class="form-control" id="cardNumber" placeholder="XXXX XXXX XXXX XXXX"
+                        maxlength="19">
+                </div>
+                <div class="col-3">
+                    <label for="cardCVC" class="form-label">CVC#</label>
+                    <input type="text" class="form-control" id="cardCVC" placeholder="0000" maxlength="4"
+                        pattern="\d{3,4}">
+                </div>
+                <div class="col-4">
+                    <label for="amount" class="form-label">Amount</label>
+                    <div class="input-group">
+                        <span class="input-group-text">$</span>
+                        <input type="text" class="form-control" placeholder="0.00">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <label for="first-name">First Name</label>
+                    <input type="text" class="form-control" id="first-name" placeholder="First name"
+                        aria-label="First name">
+                </div>
+                <div class="col-6">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" class="form-control" id="last-name" placeholder="Last name"
+                        aria-label="Last name">
+                </div>
+                <div class="col-6">
+                    <label for="city" class="form-label">City</label>
+                    <input type="text" class="form-control" id="city" placeholder="Enter your city">
+                </div>
+                <div class="col-3">
+                    <label for="state" class="form-label">State</label>
+                    <div class="input-group">
+                        <input type="text" id="state" class="form-control" placeholder="Pick a state"
+                            aria-label="Text input with segmented dropdown button">
+                        <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="visually-hidden">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <label for="postalCode" class="form-label">Postal Code</label>
+                    <input type="text" class="form-control" id="postalCode" placeholder="e.g. 1234" maxlength="10">
+                </div>
+                <div class="col-6">
+                    <div class="mb-3 text-start">
+                        <label class="form-label d-block">We accept:</label>
+                        <div class="d-flex bg-secondary p-2 rounded" style="width: 250px;">
+                            <div class="form-check me-3">
+                                <input class="form-check-input" type="radio" name="card" id="mastercard" checked>
+                                <label class="form-check-label" for="mastercard">
+                                    <img src="https://img.icons8.com/color/48/000000/mastercard-logo.png"
+                                        alt="MasterCard" width="20">
+                                </label>
+                            </div>
+                            <div class="form-check me-3">
+                                <input class="form-check-input" type="radio" name="card" id="visa">
+                                <label class="form-check-label" for="visa">
+                                    <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa" width="20">
+                                </label>
+                            </div>
+                            <div class="form-check me-3">
+                                <input class="form-check-input" type="radio" name="card" id="diners">
+                                <label class="form-check-label" for="diners">
+                                    <img src="https://img.icons8.com/color/48/000000/diners-club.png" alt="Diners Club"
+                                        width="20">
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="card" id="amex">
+                                <label class="form-check-label" for="amex">
+                                    <img src="https://img.icons8.com/color/48/000000/amex.png" alt="American Express"
+                                        width="20">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message"></textarea>
+                    <span class="text-secondary" style="font-size: 0.8rem;">Add any notes here</span>
+                </div>
+            </form>
+            <div class="col-12 mt-3 bg-light border-top">
+                <div class="card-footer my-2 d-flex justify-content-end">
+                    <button type="button" class="btn btn-secondary me-3">Cancel</button>
+                    <button type="button" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
